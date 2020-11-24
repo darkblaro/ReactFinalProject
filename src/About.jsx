@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/index.css'
 import Header from './Header';
-import Footer from './Footer'
 
 export default function About(){
     return (
@@ -24,7 +23,6 @@ export default function About(){
                         </p>
                     </section>
                 </main>
-                <Footer />
             </div>
         </>
     );

@@ -8,7 +8,7 @@ function NewGallery(){
         
         <div className='main-wrap'>
             <Header />
-            <main>
+            <main className='ngmain'>
                 <div className='content'>
                     <h1>Create New Gallery</h1> 
                     <div className="wrapper">

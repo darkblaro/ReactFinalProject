@@ -8,7 +8,7 @@ import Image from './images/logo.png'
 
 export default function ShowRoom(){
     return(
-        <main>
+        <main className="srmain">
             <div className="show-container">
                 <div className="scroll" id="left" onClick={left}>
                     <img src={LeftArrow} alt="left" />

@@ -11,10 +11,10 @@ import PageNotFound from './PageNotFound';
 ReactDOM.render(
   <BRouter>
         <Switch>
-          <Route path='/About'><About /></Route>
-          <Route component={Home} path="/"/>
+          <Route component={About} path="/About"/>
+          <Route component={Home} exact path="/Home"/>
           <Route component={NewGallery}  path="/NewGallery"/>
-          <Route path='/ShowRoom' component={ShowRoom}/>
+          <Route component={ShowRoom} path="/ShowRoom"/>
           <Route component={PageNotFound}/>
         </Switch>
   </BRouter>,

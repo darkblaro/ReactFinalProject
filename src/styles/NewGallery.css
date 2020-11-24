@@ -37,7 +37,7 @@ input[type=file],input[type=submit]{
     border: 1px solid #BB342F;
     border-radius: 5px;
 }
-main{
+.ngmain{
     display: flex;
     flex-direction: column;
     align-items: center;
