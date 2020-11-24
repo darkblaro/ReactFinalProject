@@ -1,31 +1,38 @@
 import React from 'react';
 import './styles/index.css'
 import './styles/NewGallery.css'
+import Header from './Header'
 
 function NewGallery(){
     return(
-        <>
-        <h1>Create New Gallery</h1> 
-        <div className="wrapper">
-            <form method="post" encType="multipart/form-data" id="uploader">
-                <div className="galName">
-                    <label htmlFor="galName">Give name to your gallery: </label>
-                    <input type="text" id="galName" name="galName"/>
+        
+        <div className='main-wrap'>
+            <Header />
+            <main>
+                <div className='content'>
+                    <h1>Create New Gallery</h1> 
+                    <div className="wrapper">
+                        <form method="post" encType="multipart/form-data" id="uploader">
+                            <div className="galName">
+                                <label htmlFor="galName">Give name to your gallery: </label>
+                                <input type="text" id="galName" name="galName"/>
+                            </div>
+                            <div className="author">
+                                <label htmlFor="author">Author: </label>
+                                <input type="text" id="author" />
+                            </div>
+                            <div className="files">
+                                <label htmlFor="file">Select Files</label>
+                                <input type="file" name="files[]" multiple accept="image/*" id="file" onChange={preview}/>
+                                <div id="gallery"></div>
+                                <label htmlFor="upld">Upload Files</label>
+                                <input type="submit" value="Upload File" name="submit" id="upld" onSubmit={addFiles}/>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div className="author">
-                    <label htmlFor="author">Author: </label>
-                    <input type="text" id="author" />
-                </div>
-                <div className="files">
-                    <label htmlFor="file">Select Files</label>
-                    <input type="file" name="files[]" multiple accept="image/*" id="file" onChange={preview}/>
-                    <div id="gallery"></div>
-                    <label htmlFor="upld">Upload Files</label>
-                    <input type="submit" value="Upload File" name="submit" id="upld" onSubmit={addFiles}/>
-                </div>
-            </form>
+            </main>
         </div>
-        </>
     );
 }
 

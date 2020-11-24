@@ -8,16 +8,18 @@ import Image from './images/logo.png'
 
 export default function ShowRoom(){
     return(
-        <div className="show-container">
-            <div className="scroll" id="left" onClick={left}>
-                <img src={LeftArrow} alt="left" />
+        <main>
+            <div className="show-container">
+                <div className="scroll" id="left" onClick={left}>
+                    <img src={LeftArrow} alt="left" />
+                </div>
+                <section>
+                    <img src={Image} alt="" id="slider"/>
+                </section>
+                <div className="scroll" id="right" onClick={right}>
+                    <img src={RightArrow} alt="right"/>
+                </div>
             </div>
-            <section>
-                <img src={Image} alt="" id="slider"/>
-            </section>
-            <div className="scroll" id="right" onClick={right}>
-                <img src={RightArrow} alt="right"/>
-            </div>
-        </div>
+        </main>
     );
 }

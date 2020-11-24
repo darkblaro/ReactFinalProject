@@ -3,18 +3,18 @@ html {
     box-sizing: border-box;
   }
   
-  html body {
+html body {
     height: 100%;
     margin: 0;
     background: #181818;
   }
   
-  html body #main-wrap main .show-container {
+.show-container {
     display: flex;
     margin: 5px;
   }
   
-  html body #main-wrap main .show-container .scroll {
+.show-container .scroll {
     flex: 1;
     display: flex;
     align-items: center;
@@ -22,12 +22,12 @@ html {
     z-index: 1;
   }
   
-  html body #main-wrap main .show-container .scroll img {
+.show-container .scroll img {
     width: 50px;
     height: 50px;
   }
   
-  html body #main-wrap main .show-container section {
+.show-container section {
     flex: 99;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -44,7 +44,7 @@ html {
     max-width:100%;
   }
   
-  html body .main-wrap main .show-container section img {
+.show-container section img {
     height: 100%;
   }
   
