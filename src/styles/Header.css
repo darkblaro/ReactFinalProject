@@ -1,0 +1,40 @@
+#main-wrap header {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    width: 100%;
+    color: #e6e6e6;
+    display: block;
+  }
+  
+  #main-wrap header a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #ececec;
+    font-family: Segoe UI;
+    letter-spacing: 1.5px;
+    display: block;
+  }
+  
+  #main-wrap header nav {
+    padding-left: 5px;
+    display: flex;
+  }
+  
+  #main-wrap header nav .logo {
+    height: inherit;
+    width: 50px;
+    padding: 5px 0;
+  }
+  
+  #main-wrap header nav .menu-wrap {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  #main-wrap header nav .menu-wrap > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    flex: 3;
+  }

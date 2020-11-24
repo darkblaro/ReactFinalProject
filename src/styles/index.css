@@ -1,0 +1,84 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+  
+html body {
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+body h1{
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 25px;
+}
+  
+#main-wrap {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-wrap .content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	flex: 1;
+}
+  
+#main-wrap .content main {
+	margin: 5px;
+	color: black;
+	height: 100%;
+	flex: 1 0 auto;
+	/* font-size: 20px; */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+#main-wrap .content main ul li {
+	list-style: circle;
+}
+  
+#main-wrap .content main ul li a {
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+	font-family: Segoe UI;
+}
+  
+#main-wrap .content main ul li a:hover {
+	text-decoration: underline;
+	transition: all 0.5s;
+}
+
+#getElements{
+	display:flex;
+	margin:10px;
+	flex-wrap:wrap;
+	justify-content:space-around;
+}
+.gallery{
+	margin: 10px;
+	background-color: #e48900;
+	border:1px solid #BB342F;
+	border-radius:5px;
+	padding:5px;
+	display:flex;
+	flex-direction:column;
+	width: 15%;
+}
+.gallery:hover{
+  cursor: pointer;
+}
+
+.gallery span{
+	flex:1;
+	font-family:Georgia;
+	padding-top:5px;
+}
+.gallery #galData{
+	font-family:Segoe UI;
+	flex:0 0 auto;
+	font-size:1em;
+	font-weight:200;
+}

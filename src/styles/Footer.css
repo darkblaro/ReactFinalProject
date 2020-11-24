@@ -1,0 +1,24 @@
+#main-wrap .content footer {
+    flex: 0 0 auto;
+    background: black;
+    color: #ececec;
+    height: calc(100vh-80pc);
+  }
+  
+  #main-wrap .content footer ul > li {
+    list-style: none;
+  }
+  
+  #main-wrap .content footer a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #ececec;
+    font-family: Segoe UI;
+  }
+  
+  #main-wrap .content footer #foot ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    width: 20%;
+  }

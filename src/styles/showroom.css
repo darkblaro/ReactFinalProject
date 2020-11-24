@@ -1,0 +1,50 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  html body {
+    height: 100%;
+    margin: 0;
+    background: #181818;
+  }
+  
+  html body #main-wrap main .show-container {
+    display: flex;
+    margin: 5px;
+  }
+  
+  html body #main-wrap main .show-container .scroll {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  html body #main-wrap main .show-container .scroll img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  html body #main-wrap main .show-container section {
+    flex: 99;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    height: 620px;
+  }
+  .scroll:hover{
+    background:radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(24,24,24,0) 50%);
+    border-radius: 70%;
+  }
+  #slider{
+    max-width:100%;
+  }
+  
+  html body .main-wrap main .show-container section img {
+    height: 100%;
+  }
+  
