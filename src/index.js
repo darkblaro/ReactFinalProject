@@ -12,7 +12,7 @@ ReactDOM.render(
   <BRouter>
         <Switch>
           <Route component={About} path="/About"/>
-          <Route component={Home} exact path="/Home"/>
+          <Route component={Home} exact path="/"/>
           <Route component={NewGallery}  path="/NewGallery"/>
           <Route component={ShowRoom} path="/ShowRoom"/>
           <Route component={PageNotFound}/>

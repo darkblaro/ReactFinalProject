@@ -4,7 +4,7 @@ let link=decodeURIComponent(window.location.search);
 link=link.substring(4);
 let sort=[];
 
-async function getData(){
+export async function getData(){
     let resp=await fetch('scripts/showgallery.php')
     if(resp.ok){
         let res_json=await resp.json();
