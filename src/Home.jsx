@@ -32,11 +32,12 @@ function createNewElement(name="",author="",nFiles=0, link){
     doc.appendChild(divGallery)
 }
 
+//https://jsonplaceholder.typicode.com/photos
 function Home(){
     const [galleries, setGalleries]=useState([]);
     useEffect(()=>{
         const getGalleries=async()=>{
-            fetch('https://jsonplaceholder.typicode.com/photos').then(res => res.json())
+            fetch('https://my-json-server.typicode.com/darkblaro/jsonserver/galleries').then(res => res.json())
                 .then((out) => {
                     //console.log(out)
                     setGalleries(out)
@@ -50,7 +51,7 @@ function Home(){
         <div className='content'>
             <main>
                 <div id="getElements">
-                    {galleries.map(gallery=><div key={gallery.id}>{createNewElement(gallery.id,gallery.title,0,gallery.url)}</div>)}
+                    {galleries.map(gallery=><div key={gallery.id}>{createNewElement(gallery.galleryname,gallery.auth,gallery.nfiles,gallery.url)}</div>)}
                 </div>
             </main>
             <Footer/>
