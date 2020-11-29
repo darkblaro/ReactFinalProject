@@ -27,7 +27,6 @@ function Home(){
                     {galleries.map(gallery=><div key={gallery.id} className="gallery" onClick={()=>history.push(`/ShowRoom/${gallery.id}`)}>
                                                 <span>{gallery.galleryname}</span>
                                                 <div id="galData">
-                                                    <p>{gallery.id}</p>
                                                     <p>Author: {gallery.auth}</p>
                                                     <p>Files: {gallery.nfiles}</p></div></div>)}
                 </div>
