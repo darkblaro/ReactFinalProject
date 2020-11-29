@@ -18,13 +18,13 @@ const reducer=(state,action)=>{
                     activePhoto:state.activePhoto-1
                 }
             }
-        case "right":if(state.photos.length) return {
+        case "right":if(state.activePhoto===state.photos.length-1) return {
                 photos:[...state.photos],
-                activePhoto:state.activePhoto+1}
+                activePhoto:0}
                 else{
                     return{
                         photos:[...state.photos],
-                        activePhoto:0
+                        activePhoto:state.activePhoto+1
                     }
                 }
         case "load":
