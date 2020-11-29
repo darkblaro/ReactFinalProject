@@ -14,7 +14,7 @@ ReactDOM.render(
           <Route component={About} path="/About"/>
           <Route component={Home} exact path="/"/>
           <Route component={NewGallery}  path="/NewGallery"/>
-          <Route component={ShowRoom} path="/ShowRoom"/>
+          <Route component={ShowRoom} path="/ShowRoom/:galId"/>
           <Route component={PageNotFound}/>
         </Switch>
   </BRouter>,

@@ -15,12 +15,13 @@ function NewGallery(){
         setAuthorName(event.target.value);
     }
     const handleFileUpload=async(event)=>{
-        for(let i=0;i<event.target.files.length;i++){
+        const selectedFiles = [];
+        for(let i=0; i<event.target.files.length; i++){
             const newfile={name:event.target.files[i].name}
-            const ftemp=await convertBase64(event.target.files[i]);
-            const tobj={...newfile, content:ftemp}
-            setFiles([...files,tobj])
+            const fileContent=await convertBase64(event.target.files[i]);            
+            selectedFiles.push({...newfile, content:fileContent});            
         }
+        setFiles([...files,...selectedFiles])
     }
     const convertBase64 = (file) => {
 
@@ -36,7 +37,8 @@ function NewGallery(){
                 reject(error);
             };
         });
-    };
+    }
+
     return(
         <div className='main-wrap'>
             <Header />
@@ -57,10 +59,10 @@ function NewGallery(){
                                 <label htmlFor="file">Select Files</label>
                                 <input type="file" name="files[]"  multiple accept="image/*" id="file" onChange={handleFileUpload}/>
                                 <div id="gallery">{
-                                    files.map(file=>(<img src={file.content} key={file.name}></img>))
+                                    files.map(file=>(<img src={file.content} key={file.name} alt="..."></img>))
                                 }</div>
                                 <label htmlFor="upld">Upload Files</label>
-                                <input type="submit" value="Upload File" name="submit" id="upld"/>
+                                <input type="button" name="submit" id="upld" onClick={addFiles}/>
                             </div>
                         </form>
                     </div>
@@ -70,48 +72,28 @@ function NewGallery(){
     );
 }
 
-//const url = 'https://my-json-server.typicode.com/darkblaro/jsonserver/galleries';
-
-
-// function preview(){
-//     const files=document.querySelector('input[type=file]').files;
-//     function rap(file){
-//         let fr=new FileReader();
-//         fr.addEventListener('load',function(){
-//         let image=new Image();
-//         image.src=this.result;
-//         document.getElementById('gallery').appendChild(image);
-//     },false);
-//         fr.readAsDataURL(file);
-//     }
-//     if(files){
-//         [].forEach.call(files,rap)
-//     }
-// }
-
-// function addFiles(){
-// let form=document.getElementById("uploader");
+function addFiles(){
+    const url = 'https://jsonplaceholder.typicode.com/posts';
+    let form=document.getElementById("uploader");
     
-//     const files = document.querySelector('[type=file]').files;
-//     const galName=document.getElementById("galName").value;
-//     const author=document.getElementById('author').value;
+    const files = document.querySelector('[type=file]').files;
+    const galName=document.getElementById("galName").value;
+    const author=document.getElementById('author').value;
     
-//     fetch(url, {
-//         method: 'POST',
-//         body: JSON.stringify({
-//             galleryName:galName,
-//             auth:author,
-//             file:files,
-//             nfiles:files.length
-//         }),
-//         headers:{
-//             'Content-type':'appclication/json; charset=UTF-8',
-//         },
-//     }).then((response) => response.json())
-//     .then(data => {
-//         console.log(data);
-//     });
-//     document.getElementById('gallery').innerHTML="";
-//     form.reset();
-// }
+    fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({
+            galleryName:galName,
+            authorName:author,
+            filesArray:files,
+            nfiles:files.length
+        }),
+        headers:{
+            'Content-type':'appclication/json; charset=UTF-8',
+        },
+    }).then((response) => response.json()).then((data) => {
+        console.log(data);})
+    document.getElementById('gallery').innerHTML="";
+    form.reset();
+}
 export default NewGallery
