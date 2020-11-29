@@ -28,7 +28,7 @@ function Home(){
                                                 <span>{gallery.galleryname}</span>
                                                 <div id="galData">
                                                     <p>Author: {gallery.auth}</p>
-                                                    <p>Files: {gallery.nfiles}</p></div></div>)}
+                                                    <p>Files: {gallery.photos.length}</p></div></div>)}
                 </div>
             </main>
             <Footer/>
