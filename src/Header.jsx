@@ -7,7 +7,7 @@ export default function Header(){
     return (
         <header>
             <nav> 
-                <NavLink to="/Home"><img src={Logo} alt="logo" className="logo"/></NavLink>
+                <NavLink to="/"><img src={Logo} alt="logo" className="logo"/></NavLink>
                 <div className="menu-wrap">
                     <ul className="menu">
                         <li><NavLink to="/NewGallery">Create new Gallery</NavLink></li>

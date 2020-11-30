@@ -25,7 +25,7 @@ input[type=text]{
     border-radius: 5px;
     border:3px solid#BB342F;
 }
-input[type=file],input[type=submit]{
+input[type=file],input[type=button]{
     display:none;
 }
 .files label{
@@ -37,7 +37,7 @@ input[type=file],input[type=submit]{
     border: 1px solid #BB342F;
     border-radius: 5px;
 }
-main{
+.ngmain{
     display: flex;
     flex-direction: column;
     align-items: center;

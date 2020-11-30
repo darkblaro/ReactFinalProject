@@ -45,11 +45,6 @@ body h1{
 	color: black;
 	font-family: Segoe UI;
 }
-  
-#main-wrap .content main ul li a:hover {
-	text-decoration: underline;
-	transition: all 0.5s;
-}
 
 #getElements{
 	display:flex;
